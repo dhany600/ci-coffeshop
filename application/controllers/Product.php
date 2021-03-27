@@ -5,7 +5,7 @@ class Product extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('View File');
+        $this->load->view('admin/daftar_product');
         
     }
 
