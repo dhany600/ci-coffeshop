@@ -12,14 +12,13 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/dist/css/adminlte.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="<?= base_url()?>assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?= base_url()?>assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?= base_url()?>assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
-
-    <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="<?= base_url()?>assets/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-  </div>
 
     <!-- Site wrapper -->
     <div class="wrapper">
@@ -75,7 +74,8 @@
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?= base_url('auth/dashboard')?>" class="nav-link 
+                                <?= $this->uri->segment(2) == 'dashboard' ? "active" : "" ?>">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -83,7 +83,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../widgets.html" class="nav-link">
+                            <a href="<?= base_url('product')?>" class="nav-link
+                                <?= $this->uri->segment(1) == 'product' ? "active" : "" ?>">
                                 <i class="nav-icon fas fa-shopping-cart"></i>
                                 <p>
                                     Products
@@ -91,7 +92,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?= base_url('slider')?>" class="nav-link
+                                <?= $this->uri->segment(1) == 'slider' ? "active" : "" ?>">
                                 <i class="nav-icon fas fa-image"></i>
                                 <p>
                                     Slider
@@ -99,7 +101,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?= base_url('user_admin')?>" class="nav-link
+                                <?= $this->uri->segment(1) == 'user_admin' ? "active" : "" ?>">
                                 <i class="nav-icon fas fa-users"></i>
                                 <p>
                                     User Admin
@@ -107,7 +110,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?= base_url('whatsapp')?>" class="nav-link
+                                <?= $this->uri->segment(1) == 'whatsapp' ? "active" : "" ?>">
                                 <i class="nav-icon fas fa-phone"></i>
                                 <p>
                                     Whatsapps
@@ -120,3 +124,5 @@
             </div>
             <!-- /.sidebar -->
         </aside>
+
+          <div class="content-wrapper">
