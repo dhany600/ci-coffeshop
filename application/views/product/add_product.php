@@ -7,31 +7,36 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="ge">
+              <!-- <form action="<?= site_url('Product/add_proses')?>" method="POST"> -->
+                <?php echo form_open_multipart('Product/add_proses'); ?>
                 <div class="card-body">
                   <div class="form-group">
                     <label for="nama_produk">Nama Produk</label>
-                    <input type="text" class="form-control" id="nama_produk" name="nama_produk">
+                    <input type="text" class="form-control" id="nama_produk" name="nama_produk" required>
                   </div>
                   <div class="form-group">
-                        <label>Size</label>
-                        <select class="form-control" name="pilih_ukuran">
-                          <option>Pilih Ukuran BH</option>
-                          <option>S</option>
-                          <option>M</option>
-                          <option>L</option>
-                        </select>
-                      </div>
+                    <label>Size</label>
+                    <select class="form-control" name="ukuran_produk" id="ukuran_produk" required>
+                      <option>Pilih Ukuran BH</option>
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                    </select>
+                  </div>
                   <div class="form-group">
-                        <label>Textarea</label>
-                        <textarea class="form-control" name="deskripsi" rows="4" placeholder="Enter ..."></textarea>
-                      </div>
+                    <label for="harga_produk">Harga</label>
+                    <input type="number" class="form-control" id="harga_produk" name="harga_produk" required>
+                  </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
+                    <label>Deskripsi</label>
+                    <textarea class="form-control" name="deskripsi_produk" rows="4" required placeholder="Enter ..."></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="gambar_produk">File input</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                        <input type="file" class="custom-file-input" id="gambar_produk" name="gambar_produk">
+                        <label class="custom-file-label" for="gambar_produk">Choose file</label>
                       </div>
                     </div>
                   </div>
@@ -41,7 +46,8 @@
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
 
-              </form>
+              <!-- </form> -->
+              <?php echo form_close(); ?>
             </div>
           </div>
         </section>

@@ -16,10 +16,11 @@
   <link rel="stylesheet" href="<?= base_url()?>assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="<?= base_url()?>assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="<?= base_url()?>assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?= base_url()?>assets/plugins/toastr/toastr.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
-
+<div class="flash-data" data-flashdata="<?php echo $this->session->flashdata('pesan'); ?>"></div>
     <!-- Site wrapper -->
     <div class="wrapper">
         <!-- Navbar -->

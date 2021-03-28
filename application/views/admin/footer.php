@@ -45,6 +45,8 @@
 <!-- AdminLTE for demo purposes -->
 <script src="<?= base_url()?>assets/dist/js/demo.js"></script>
 <!-- Page specific script -->
+<script src="<?= base_url()?>assets/plugins/toastr/toastr.min.js"></script>
+<script src="<?= base_url()?>assets/alert.js"></script>
 <script>
   $(function () {
     $("#example1").DataTable({

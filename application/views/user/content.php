@@ -13,7 +13,8 @@
                                     <div class="tm-ratio tm-ratio-4-3"><a class="tm-media-box" href="product.html">
                                             <div class="tm-product-card-labels"><span class="uk-label uk-label-success">new</span>
                                             </div>
-                                            <figure class="tm-media-box-wrap"><img src="<?= base_url()?>assets/template-user/images/products/8/8-medium.jpg" alt="Lenovo Yoga 720-13IKB 80X60059RK (Silver)" />
+                                            <figure class="tm-media-box-wrap">
+                                                <img src="<?= base_url('upload/product/'.$data->product_img)?>" alt="Lenovo Yoga 720-13IKB 80X60059RK (Silver)" />
                                             </figure>
                                         </a></div>
                                 </div>
