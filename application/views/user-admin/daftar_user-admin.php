@@ -20,7 +20,8 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Gambar</th>
+                                    <th>Username</th>
+                                    <th>Password</th>
                                     <th style="text-align: center" width="20%">Opsi</th>
                                 </tr>
                             </thead>
@@ -30,6 +31,7 @@
                                 foreach ($row->result() as $key => $data) { ?>
                                     <tr>
                                         <td><?= $no++; ?></td>
+                                        <td><?= $data->product_name; ?></td>
                                         <td><?= $data->product_name; ?></td>
                                         <td style="text-align: center;">
                                             <button type="button" class="btn btn-sm btn-warning">
@@ -43,7 +45,8 @@
                             <tfoot>
                                 <tr>
                                     <th>No</th>
-                                    <th>Gambar</th>
+                                    <th>Username</th>
+                                    <th>Password</th>
                                     <th style="text-align: center" width="20%">Opsi</th>
                                 </tr>
                             </tfoot>

@@ -3,20 +3,19 @@
         <!-- general form elements -->
         <div class="card card-primary">
             <div class="card-header">
-                <h3 class="card-title">Add Slider</h3>
+                <h3 class="card-title">Add User</h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
             <form action="ge">
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="exampleInputFile">Pilih Gambar Slider</label>
-                        <div class="input-group">
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="exampleInputFile">
-                                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                            </div>
-                        </div>
+                        <label for="nama_produk">Username</label>
+                        <input type="text" class="form-control" id="nama_produk" name="nama_produk" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nama_produk">Password</label>
+                        <input type="text" class="form-control" id="nama_produk" name="nama_produk" required>
                     </div>
                 </div>
                 <!-- /.card-body -->
