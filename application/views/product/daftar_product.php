@@ -36,7 +36,7 @@
                         <td><?= $data->product_size;?></td>
                         <td><?= $data->product_price;?></td>
                         <td style="text-align: center;">
-                        <button type="button" class="btn btn-sm btn-success">
+                        <button type="button" class="btn btn-sm btn-warning">
                           <i class="icon fas fa-edit"></i> Edit</button>
                         <button type="button" class="btn btn-sm btn-danger">
                           <i class="icon fas fa-trash"></i> Hapus</button>
