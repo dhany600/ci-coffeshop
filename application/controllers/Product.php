@@ -28,7 +28,22 @@ public function __construct()
     {
       $this->M_product->add_product();
       $this->session->set_flashdata('pesan', 'Ditambah');
-      redirect('Product/add','refresh');
+      redirect('Product','refresh');
+    }
+
+    public function edit($id)
+    {
+      $data['row'] = $this->M_product->get_product($id)->row();
+      $this->load->view('admin/header');
+      $this->load->view('product/edit_product', $data);
+      $this->load->view('admin/footer');
+    }
+
+    public function edit_proses()
+    {
+      $this->M_product->edit_product();
+      $this->session->set_flashdata('pesan', 'Diubah');
+      redirect('Product','refresh');
     }
 
     public function delete()

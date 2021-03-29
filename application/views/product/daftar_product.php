@@ -39,11 +39,15 @@
                         <td><?= $data->product_price;?></td>
                         <td><?= $data->product_deskripsi;?></td>
                         <td>
+                          <?php if ($data->product_img == null): ?>
+                          <img src="<?= base_url('upload/product/default.png');?>" style="width: 80px;">
+                          <?php else: ?>
                           <img src="<?= base_url('upload/product/'.$data->product_img);?>" style="width: 80px;">
+                          <?php endif ?>
                         </td>
                         <td style="text-align: center;">
-                        <button type="button" class="btn btn-sm btn-warning">
-                          <i class="icon fas fa-edit"></i> Edit</button>
+                        <a href="<?=site_url('product/edit/'.$data->product_id)?>" class="btn btn-sm btn-warning">
+                          <i class="icon fas fa-edit"></i> Edit</a>
                         <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#hapus_<?=$data->product_id?>" data-backdrop="static" data-keyboard="false">
                           <i class="icon fas fa-trash"></i> Hapus</button>
                         </td>

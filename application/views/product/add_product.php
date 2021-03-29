@@ -17,7 +17,7 @@
                   <div class="form-group">
                     <label>Size</label>
                     <select class="form-control" name="ukuran_produk" id="ukuran_produk" required>
-                      <option>Pilih Ukuran BH</option>
+                      <option selected disabled value="">--Pilih Ukuran BH--</option>
                       <option value="S">S</option>
                       <option value="M">M</option>
                       <option value="L">L</option>
@@ -32,11 +32,11 @@
                     <textarea class="form-control" name="deskripsi_produk" rows="4" required placeholder="Enter ..."></textarea>
                   </div>
                   <div class="form-group">
-                    <label for="gambar_produk">File input</label>
+                    <label for="exampleInputFile">Gambar Produk</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="gambar_produk" name="gambar_produk">
-                        <label class="custom-file-label" for="gambar_produk">Choose file</label>
+                        <input type="file" class="custom-file-input" id="exampleInputFile" name="gambar_produk">
+                        <label class="custom-file-label" for="exampleInputFile">Pilih Gambar</label>
                       </div>
                     </div>
                   </div>

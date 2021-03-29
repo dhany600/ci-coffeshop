@@ -7,14 +7,14 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form action="ge">
+                <?php echo form_open_multipart('Slider/add_proses'); ?>
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="exampleInputFile">Pilih Gambar Slider</label>
+                        <label for="gambar_slider">Pilih Gambar Slider</label>
                         <div class="input-group">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="exampleInputFile">
-                                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                <input type="file" class="custom-file-input" id="gambar_slider" name="gambar_slider">
+                                <label class="custom-file-label" for="gambar_slider">Choose file</label>
                             </div>
                         </div>
                     </div>
@@ -23,8 +23,7 @@
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
-
-            </form>
+            <?php echo form_close(); ?>
         </div>
     </div>
 </section>
