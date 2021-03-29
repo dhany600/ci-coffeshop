@@ -7,11 +7,11 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form action="ge">
+            <form action="<?= site_url('whatsapp/add_proses')?>" method="POST">
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="nama_produk">Whatsapp Number</label>
-                        <input type="text" class="form-control" id="nama_produk" name="nama_produk" required>
+                        <label for="whatsapp">Nomor Whatsapp</label>
+                        <input type="text" class="form-control" id="whatsapp" name="whatsapp" required>
                     </div>
                 </div>
                 <!-- /.card-body -->

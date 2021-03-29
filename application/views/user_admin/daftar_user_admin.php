@@ -9,7 +9,7 @@
                     <div class="card-header">
                         <h3 class="card-title">Data User Admin</h3>
                         <ol class="float-sm-right">
-                            <div class="breadcrumb-item"><a href="<?= base_url('slider/add_slider') ?>" class="btn btn-sm btn-success">
+                            <div class="breadcrumb-item"><a href="<?= base_url('user_admin/add') ?>" class="btn btn-sm btn-success">
                                     <i class="icon fas fa-plus"></i> Add User Admin</a>
                             </div>
                         </ol>
@@ -34,9 +34,9 @@
                                         <td><?= $data->nama; ?></td>
                                         <td><?= $data->username; ?></td>
                                         <td style="text-align: center;">
-                                            <button type="button" class="btn btn-sm btn-warning">
-                                                <i class="icon fas fa-edit"></i> Edit</button>
-                                            <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#hapus_<?= $data->product_id ?>" data-backdrop="static" data-keyboard="false">
+                                        <a href="<?=site_url('user_admin/edit/'.$data->user_id)?>" class="btn btn-sm btn-warning">
+                                          <i class="icon fas fa-edit"></i> Edit</a>
+                                            <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#hapus_<?= $data->user_id ?>" data-backdrop="static" data-keyboard="false">
                                                 <i class="icon fas fa-trash"></i> Hapus</button>
                                         </td>
                                     </tr>
@@ -64,4 +64,30 @@
 </section>
 <!-- /.content -->
 
-<!-- /.content-wrapper -->
+<!-- /.content-wrapper --><!-- Alert Hapus Data -->
+    <?php $no = 1;
+    foreach ($row->result() as $key => $data) : $no++; ?>
+    <div class="modal fade" id="hapus_<?=$data->user_id?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-center" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Yakin ingin menghapus?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <?php echo form_open_multipart('user_admin/delete'); ?>
+            <input type="hidden" id="id" name="id" value="<?=$data->user_id?>">
+            <p>Anda akan menghapus data "<?=$data->username ?>"</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+            <button class="btn btn-danger" type="submit">Hapus</button>
+            <?php echo form_close(); ?>
+          </div>
+        </div>
+      </div>
+    </div>
+    <?php endforeach; ?>
+    <!-- End Alert Hapus Data -->

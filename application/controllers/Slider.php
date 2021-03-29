@@ -30,6 +30,20 @@ class Slider extends CI_Controller {
 		redirect('Slider','refresh');
 	}
 
+	public function edit($id)
+    {
+      $data['row'] = $this->M_slider->get_slider($id)->row();
+      $this->load->view('admin/header');
+      $this->load->view('slider/edit_slider', $data);
+      $this->load->view('admin/footer');
+    }
+
+    public function edit_proses()
+    {
+      $this->M_slider->edit_slider();
+      redirect('slider','refresh');
+    }
+
     public function delete()
     {
       $this->M_slider->delete_slider();

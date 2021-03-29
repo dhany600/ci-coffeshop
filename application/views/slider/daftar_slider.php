@@ -33,8 +33,8 @@
                                           <img src="<?= base_url('upload/slider/'.$data->slider_img);?>" style="width: 80px;">
                                         </td>
                                         <td style="text-align: center;">
-                                            <button type="button" class="btn btn-sm btn-warning">
-                                                <i class="icon fas fa-edit"></i> Edit</button>
+                                            <a href="<?=site_url('slider/edit/'.$data->slider_id)?>" class="btn btn-sm btn-warning">
+                                              <i class="icon fas fa-edit"></i> Edit</a>
                                             <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#hapus_<?= $data->slider_id ?>" data-backdrop="static" data-keyboard="false">
                                                 <i class="icon fas fa-trash"></i> Hapus</button>
                                         </td>
