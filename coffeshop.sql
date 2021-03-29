@@ -29,11 +29,11 @@ CREATE TABLE `tb_product` (
   `product_img` varchar(200) DEFAULT NULL,
   `status` int(1) DEFAULT '1',
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
 /*Data for the table `tb_product` */
 
-insert  into `tb_product`(`product_id`,`product_name`,`product_size`,`product_price`,`product_deskripsi`,`product_img`,`status`) values (19,'sdgd','Pilih Ukuran BH',2423,'dsf','sdgd-2423.jpg',1),(20,'dsfsdf','M',532432,'safsd','dsfsdf-532432.png',0),(21,'fdsds','M',76456,'fhfgh','fdsds-76456.jpg',1);
+insert  into `tb_product`(`product_id`,`product_name`,`product_size`,`product_price`,`product_deskripsi`,`product_img`,`status`) values (19,'sdgdfasd','M',10000,'deskripsi abalabal','sdgdfasd-10000.jpg',1),(20,'dsfsdf','M',532432,'safsd','dsfsdf-532432.png',0),(21,'fdsds','M',76456,'fhfgh','fdsds-76456.jpg',1),(22,'fasdfa','L',5234234,'dfsdf asdasd',NULL,1),(23,'fsdfsd','L',12312312,'asdasdasdasfasd','fsdfsd-12312312.png',1);
 
 /*Table structure for table `tb_slider` */
 
@@ -42,10 +42,13 @@ DROP TABLE IF EXISTS `tb_slider`;
 CREATE TABLE `tb_slider` (
   `slider_id` int(11) NOT NULL AUTO_INCREMENT,
   `slider_img` varchar(200) NOT NULL,
+  `status` int(1) DEFAULT '1',
   PRIMARY KEY (`slider_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 /*Data for the table `tb_slider` */
+
+insert  into `tb_slider`(`slider_id`,`slider_img`,`status`) values (1,'69947.png',1),(2,'c5UiuE-one-piece-hd-photo.png',1),(3,'dev.jpg',0);
 
 /*Table structure for table `tb_user` */
 
@@ -53,8 +56,10 @@ DROP TABLE IF EXISTS `tb_user`;
 
 CREATE TABLE `tb_user` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(100) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
+  `status` int(1) DEFAULT '1',
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -67,6 +72,7 @@ DROP TABLE IF EXISTS `tb_whatsapp`;
 CREATE TABLE `tb_whatsapp` (
   `whatsapp_id` int(11) NOT NULL AUTO_INCREMENT,
   `whatsapp_number` varchar(100) NOT NULL,
+  `status` int(1) DEFAULT '1',
   PRIMARY KEY (`whatsapp_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
