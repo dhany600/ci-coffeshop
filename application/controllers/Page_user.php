@@ -19,6 +19,14 @@ class Page_user extends CI_Controller {
         $this->load->view('user/footer');
     }
 
+    public function detail()
+    {
+        $data['row'] = $this->M_product->get_product();
+        $this->load->view('user/header');
+        $this->load->view('user/detail_produk', $data);
+        $this->load->view('user/footer');
+    }
+
 }
 
 /* End of file Controllername.php */

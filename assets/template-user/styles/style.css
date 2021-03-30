@@ -8,6 +8,12 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  * 3. Style
  */
+.product-detail-image-content{
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+}
 html {
   /* 1 */
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;

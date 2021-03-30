@@ -10,7 +10,7 @@
 
                             <article class="tm-product-card">
                                 <div class="tm-product-card-media">
-                                    <div class="tm-ratio tm-ratio-4-3"><a class="tm-media-box" href="product.html">
+                                    <div class="tm-ratio tm-ratio-4-3"><a class="tm-media-box" href="<?= base_url('page_user/detail') ?>">
                                             <div class="tm-product-card-labels"><span class="uk-label uk-label-success">new</span>
                                             </div>
                                             <figure class="tm-media-box-wrap">
