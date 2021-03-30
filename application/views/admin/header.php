@@ -20,7 +20,11 @@
 </head>
 
 <body class="hold-transition sidebar-mini">
+        <?php if ($this->session->flashdata('login')): ?>
+<div class="flash-data" data-flashdata="<?php echo $this->session->flashdata('login'); ?>"></div>
+        <?php elseif($this->session->flashdata('pesan')): ?>
 <div class="flash-data" data-flashdata="<?php echo $this->session->flashdata('pesan'); ?>"></div>
+        <?php endif ?>
     <!-- Site wrapper -->
     <div class="wrapper">
         <!-- Navbar -->

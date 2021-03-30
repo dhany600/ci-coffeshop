@@ -64,7 +64,8 @@
 </section>
 <!-- /.content -->
 
-<!-- /.content-wrapper --><!-- Alert Hapus Data -->
+<!-- /.content-wrapper -->
+<!-- Alert Hapus Data -->
     <?php $no = 1;
     foreach ($row->result() as $key => $data) : $no++; ?>
     <div class="modal fade" id="hapus_<?=$data->user_id?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
