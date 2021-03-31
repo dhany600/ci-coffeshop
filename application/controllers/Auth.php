@@ -11,6 +11,7 @@ class Auth extends CI_Controller {
 
     public function index()
     {
+        ceksdh_login_pegawai();
         $this->load->view('admin/login');
         
     }

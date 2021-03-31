@@ -7,6 +7,7 @@ class Slider extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('M_slider');
+  		cekblm_login_pegawai();
 	}
 	public function index()
 	{

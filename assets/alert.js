@@ -25,5 +25,9 @@ if (flashdata == 'Ganda') {
   toastr.warning('Gagal Tambah Data! Username Sudah Digunakan');
 }
 
+if (flashdata == 'Login') {
+  toastr.warning('Gagal Tambah Data! Username Sudah Digunakan');
+}
+
 
 

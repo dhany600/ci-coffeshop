@@ -7,6 +7,7 @@ public function __construct()
 {
 	parent::__construct();
 	$this->load->model('M_product');
+  cekblm_login_pegawai();
 }
     public function index()
     {

@@ -7,6 +7,7 @@ class Whatsapp extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('M_whatsapp');
+    cekblm_login_pegawai();
 	}
 
 	public function index()
