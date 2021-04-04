@@ -54,7 +54,6 @@ public function __construct()
       redirect('Product','refresh');
     }
 
-
 }
 
 /* End of file Controllername.php */

@@ -2,37 +2,43 @@
 <div class="uk-container mt-5">
     <div class="row">
         <div class="col-6">
-            <img src="<?= base_url() ?>/assets/template-user/images/catalog/tv.svg" alt="" class="product-detail-image-content" style="
+            <?php if (!$row->product_img): ?>
+                <img src="<?= base_url('upload/product/default.png')?>" alt="" class="product-detail-image-content" style="
                 border: 1px solid black;">
+            <?php else: ?>
+                <img src="<?= base_url('upload/product/'.$row->product_img)?>" alt="" class="product-detail-image-content" style="
+                border: 1px solid black;">
+            <?php endif ?>
         </div>
-        <div class="col-6">
-            <h2 style="font-weight: bold;">
-                judul barang
-            </h2>
-            <h3>
-                Size : M
-            </h3>
-            <h3>
-                Rp 123.456
-            </h3>
-            <div class=" my-4" style="
-                width: 100%;
-                height: 1px;
-                border: 1px solid black;">
+            <div class="col-6">
+                <h2 style="font-weight: bold;">
+                    <?= $row->product_name;?>
+                </h2>
+                <h3>
+                    Size : <?= $row->product_size;?>
+                </h3>
+                <h3>
+                    Rp <?= $row->product_price;?>
+                </h3>
+                <div class=" my-4" style="
+                    width: 100%;
+                    height: 1px;
+                    border: 1px solid black;">
+                </div>
+                <p style="
+                    font-size: 20px;">
+                    Deskripsi : </br>
+                    <?= $row->product_deskripsi?>
+                </p>
+                <div class=" my-4" style="
+                    width: 100%;
+                    height: 1px;
+                    border: 1px solid black;">
+                </div>
+                <div class="breadcrumb-item"><a href="<?= $wa->whatsapp_link?>" class="btn btn-sm btn-success" style="font-size: 35px;">
+                        <i class="icon fas fa-phone"></i> Whatsapps</a>
+                </div>
             </div>
-            <p style="
-                font-size: 20px;">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, laborum dolore porro architecto eius perspiciatis aspernatur molestias eum accusamus distinctio similique modi delectus error possimus quo aut atque fugit. Quas.
-            </p>
-            <div class=" my-4" style="
-                width: 100%;
-                height: 1px;
-                border: 1px solid black;">
-            </div>
-            <div class="breadcrumb-item"><a href="<?= base_url('product/add') ?>" class="btn btn-sm btn-success" style="font-size: 35px;">
-                    <i class="icon fas fa-phone"></i> Whatsapps</a>
-            </div>
-        </div>
     </div>
 </div>
 </section>
@@ -45,15 +51,19 @@
 
                 <!-- Produk -->
                 <?php
-                foreach ($row->result() as $key => $data) { ?>
+                foreach ($list_product->result() as $key => $data) { ?>
 
                     <article class="tm-product-card">
                         <div class="tm-product-card-media">
-                            <div class="tm-ratio tm-ratio-4-3"><a class="tm-media-box" href="<?= base_url('page_user/detail') ?>">
+                            <div class="tm-ratio tm-ratio-4-3"><a class="tm-media-box" href="<?= base_url('page_user/detail/'.$data->product_id) ?>">
                                     <div class="tm-product-card-labels"><span class="uk-label uk-label-success">new</span>
                                     </div>
                                     <figure class="tm-media-box-wrap">
+                                        <?php if (!$data->product_img): ?>
+                                        <img src="<?= base_url('upload/product/default.png') ?>" alt="Lenovo Yoga 720-13IKB 80X60059RK (Silver)" />
+                                        <?php else: ?>
                                         <img src="<?= base_url('upload/product/' . $data->product_img) ?>" alt="Lenovo Yoga 720-13IKB 80X60059RK (Silver)" />
+                                        <?php endif ?>
                                     </figure>
                                 </a></div>
                         </div>

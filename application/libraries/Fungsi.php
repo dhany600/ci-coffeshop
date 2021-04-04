@@ -27,6 +27,20 @@
 			return $project;
 		}
 
+		function count_slider()
+		{
+			$this->CI->load->model('M_slider');
+			$project =  $this->CI->M_slider->get_slider()->num_rows();
+			return $project;
+		}
+
+		function count_whatsapp()
+		{
+			$this->CI->load->model('M_whatsapp');
+			$project =  $this->CI->M_whatsapp->get_whatsapp()->num_rows();
+			return $project;
+		}
+
 	}
 
 ?>

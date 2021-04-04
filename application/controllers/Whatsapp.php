@@ -21,7 +21,7 @@ class Whatsapp extends CI_Controller {
 
    	public function add()
     {
-		$this->load->view('admin/header');
+		    $this->load->view('admin/header');
       	$this->load->view('whatsapp/add_whatsapp');
       	$this->load->view('admin/footer');
    	}

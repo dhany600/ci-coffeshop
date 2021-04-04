@@ -9,9 +9,16 @@
                     <div class="card-header">
                         <h3 class="card-title">Data Whatsapp</h3>
                         <ol class="float-sm-right">
-                            <div class="breadcrumb-item"><a href="<?= base_url('whatsapp/add') ?>" class="btn btn-sm btn-success">
-                                    <i class="icon fas fa-plus"></i> Add whatsapp</a>
-                            </div>
+                            <?php if ($this->fungsi->count_whatsapp() >= 1): ?>
+                                <div class="breadcrumb-item">
+                                    <button type="button" class="btn btn-sm btn-danger" disabled>
+                                    <i class="icon fas fa-plus"></i> Add whatsapp</button>
+                                </div>
+                            <?php else: ?>
+                                <div class="breadcrumb-item"><a href="<?= base_url('whatsapp/add') ?>" class="btn btn-sm btn-success">
+                                        <i class="icon fas fa-plus"></i> Add whatsapp</a>
+                                </div>
+                            <?php endif ?>
                         </ol>
                     </div>
                     <!-- /.card-header -->

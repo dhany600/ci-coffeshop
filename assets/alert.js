@@ -29,5 +29,9 @@ if (flashdata == 'Login') {
   toastr.warning('Gagal Tambah Data! Username Sudah Digunakan');
 }
 
+if (flashdata == 'limit_wa') {
+  toastr.error('Tidak Bisa Menambah Nomor Whatsapp Lebih dari 1');
+}
+
 
 

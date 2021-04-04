@@ -10,11 +10,16 @@
 
                             <article class="tm-product-card">
                                 <div class="tm-product-card-media">
-                                    <div class="tm-ratio tm-ratio-4-3"><a class="tm-media-box" href="<?= base_url('page_user/detail') ?>">
+                                    <div class="tm-ratio tm-ratio-4-3">
+                                        <a class="tm-media-box" href="<?= base_url('page_user/detail/'.$data->product_id)?>">
                                             <div class="tm-product-card-labels"><span class="uk-label uk-label-success">new</span>
                                             </div>
                                             <figure class="tm-media-box-wrap">
-                                                <img src="<?= base_url('upload/product/'.$data->product_img)?>" alt="Lenovo Yoga 720-13IKB 80X60059RK (Silver)" />
+                                                <?php if (!$data->product_img): ?>
+                                                <img src="<?= base_url('upload/product/default.png') ?>" alt="Lenovo Yoga 720-13IKB 80X60059RK (Silver)" />
+                                                <?php else: ?>
+                                                <img src="<?= base_url('upload/product/' . $data->product_img) ?>" alt="Lenovo Yoga 720-13IKB 80X60059RK (Silver)" />
+                                                <?php endif ?>
                                             </figure>
                                         </a></div>
                                 </div>
